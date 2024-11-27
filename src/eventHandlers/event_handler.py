@@ -1,5 +1,6 @@
 import logging
 from typing import Callable
+
 from eventHandlers.push_event_handler import scan_push_event
 from eventHandlers.repository_event_handler import scan_repository_event
 from eventHandlers.team_event_handler import scan_team_event
