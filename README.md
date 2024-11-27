@@ -2,9 +2,15 @@
 FastAPI server that detects suspicious activity in GitHub Organizations.
 
 ## How to run
-Execute the following command -
+Execute -
 ```
 ./run.sh
+```
+
+## How to test
+Execute -
+```
+./test.sh
 ```
 
 ## Docs of currently supported GitHub Webhooks

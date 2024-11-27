@@ -24,6 +24,7 @@ async def github_event(request: Request):
     try:
         event = await parse_github_webhook_request(request)
         handle_github_webhook(event)
+
         content = json.dumps({"message": f"{str(type(event))} event received"})
         return Response(content=content, status_code=HTTPStatus.OK)
 
