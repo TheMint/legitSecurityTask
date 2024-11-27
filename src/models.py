@@ -7,27 +7,6 @@ from typing import Literal
 from pydantic import BaseModel
 
 
-class Team(BaseModel):
-    name: str
-    id: int
-    node_id: str
-    slug: str
-    descriptions: str
-    privacy: str
-    notification_setting: str
-    url: str
-    html_url: str
-    members_url: str
-    repositories_url: str
-    permission: str
-    parent: str = None
-
-
-class Pusher(BaseModel):
-    name: str
-    email: str
-
-
 class GithubWebhookBase(BaseModel):
     action: Literal[
         "created",
@@ -42,15 +21,15 @@ class GithubWebhookBase(BaseModel):
 
 
 class TeamEvent(GithubWebhookBase):
-    team: dict = {}
+    team: dict
 
 
 class PushEvent(GithubWebhookBase):
-    pusher: Pusher
+    pusher: dict
 
 
 class RepositoryEvent(GithubWebhookBase):
-    repository: dict = {}
+    repository: dict
 
 
 GithubEvent = RepositoryEvent | PushEvent | TeamEvent
