@@ -3,7 +3,7 @@ from webhook_types import GithubWebhook
 ILLEGAL_PREFIXES = tuple("hacker")
 
 
-def handle_team_event(event: GithubWebhook) -> str | None:
+def scan_team_event(event: GithubWebhook) -> str | None:
     team_name = event.team["name"]
     user = event.sender["login"]
     if team_name.lower().startswith(ILLEGAL_PREFIXES):

@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 repos_creation_time: dict[str, datetime] = {}
 
 
-def handle_repository_event(event: GithubWebhook) -> str | None:
+def scan_repository_event(event: GithubWebhook) -> str | None:
     repo_name = event.repository["full_name"]  # "organization/repo"
     user = event.sender["login"]
 

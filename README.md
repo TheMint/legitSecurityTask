@@ -1,12 +1,20 @@
-# How to run smee.io for webhook deliveries from GitHub
-Execute the following command -
-`
-smee -u https://smee.io/230RT53tGQjBAI4F --target http://127.0.0.1:3000/github-event
-`
+# Legit Security / GitHub Webhook Scanner
+FastAPI server that detects suspicious activity in GitHub Organizations.
 
-## Docs of relevant events
+## How to run
+Execute the following command -
+```
+./run.sh
+```
+
+## Docs of currently supported GitHub Webhooks
 * Push - https://docs.github.com/en/webhooks/webhook-events-and-payloads#push
 * Repository - https://docs.github.com/en/webhooks/webhook-events-and-payloads?actionType=created#repository
 * Team - https://docs.github.com/en/webhooks/webhook-events-and-payloads#team
 
+
+
+## Authors
+
+- Yotam Ran
 
