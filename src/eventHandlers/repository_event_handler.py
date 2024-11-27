@@ -1,11 +1,11 @@
-from webhook_types import GithubWebhook
+from models import RepositoryEvent
 from datetime import datetime, timedelta
 
 # Map of recently created repositories and their creation time
 repos_creation_time: dict[str, datetime] = {}
 
 
-def scan_repository_event(event: GithubWebhook) -> str | None:
+def scan_repository_event(event: RepositoryEvent) -> str | None:
     repo_name = event.repository["full_name"]  # "organization/repo"
     user = event.sender["login"]
 

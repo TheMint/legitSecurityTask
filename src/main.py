@@ -12,6 +12,7 @@ from webhookParser.webhook_parsers import parse_github_webhook_request
 
 app = FastAPI()
 
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(levelname)s: %(message)s",
@@ -23,7 +24,7 @@ async def github_event(request: Request):
     try:
         event = await parse_github_webhook_request(request)
         handle_github_webhook(event)
-        content = json.dumps({"message": f"{event.event_type} event received"})
+        content = json.dumps({"message": f"{str(type(event))} event received"})
         return Response(content=content, status_code=HTTPStatus.OK)
 
     except ValidationError as e:
