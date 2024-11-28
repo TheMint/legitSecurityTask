@@ -8,7 +8,7 @@ Setup your Github Organization's webhooks to pipe via smee.io into this tool.
 Run / test -
 
 ```
-Run - docker run -e MODE=run -e {SMEE_LINK} themint/legit-security-task
+Run - docker run -e SMEE_LINK={LINK} themint/legit-security-task
 Test - docker run -e MODE=test themint/legit-security-task
 ```
 
