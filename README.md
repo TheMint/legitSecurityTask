@@ -2,14 +2,16 @@
 FastAPI server that detects suspicious activity in GitHub Organizations.
 
 ## Docker usage
-Build image locally - 
+Run / test -
+```
+docker run -e MODE=(test/run) themint/legit-security-task
+```
+
+If you want to rebuild the image, use - 
 ```
 docker build -t legit-security-task .
 ```
-Run / test -
-```
-docker run -e MODE=(test/run) legit-security-task
-```
+
 
 Alternatively, run locally - 
 
