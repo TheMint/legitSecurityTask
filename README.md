@@ -1,6 +1,18 @@
 # Legit Security / GitHub Webhook Scanner
 FastAPI server that detects suspicious activity in GitHub Organizations.
 
+## Docker usage
+Build image locally - 
+```
+docker build -t legit-security-task .
+```
+Run / test -
+```
+docker run -e MODE=(test/run) legit-security-task
+```
+
+Alternatively, run locally - 
+
 ## Installing dependencies
 Execute - 
 ```
@@ -19,15 +31,7 @@ Execute -
 ./test.sh
 ```
 
-## Docker usage
-Build image locally - 
-```
-docker build -t legit-security-task .
-```
-Run / test -
-```
-docker run -e MODE=(test/run) legit-security-task
-```
+
 
 
 ## Docs of currently supported GitHub Webhooks
